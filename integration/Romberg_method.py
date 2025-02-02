@@ -1,5 +1,5 @@
 import numpy as np
-
+import math
 
 def romberg_integration(func, a, b, n):
     """
@@ -34,18 +34,18 @@ def romberg_integration(func, a, b, n):
     return R[n - 1, n - 1]
 
 
-def f(x):
-    return 1/(2+x ** 4)
+def main(f=None,a=None,b=None,n=None):
 
-def main():
-
+    f = lambda x: (math.sin(x**2 + 5*x + 6)) / (2 * math.exp(-x))
     a = 0
     b = 1
     n = 5
     integral = romberg_integration(f, a, b, n)
 
     print( f" Division into n={n} sections ")
-    print(f"Approximate integral in range [{a},{b}] is {integral}")    
+    print(f"Approximate integral in range [{a},{b}] is {integral}")
+
+    return integral    
 
 if __name__ == '__main__':
     main()
