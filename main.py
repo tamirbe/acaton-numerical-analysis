@@ -4,7 +4,10 @@ from root.bisection_method import main as bisection
 from root.newtonRapson import main as newt_raph
 from interpolation.lagrange_interpolation import main as lagrange
 from interpolation.neville_method import main as neville
+from matrix.LU_factorization import main as LU
+from matrix.gauss_seidel import main as gauss_seidel
 import math
+import numpy as np
 
 if __name__ == '__main__':
     # excersize 2
@@ -29,6 +32,16 @@ if __name__ == '__main__':
     print(f"The romberg method solution (Group 2): {1300*result}")
     result = trap(f,0,1,5)
     print(f"The trapezodial method solution (Group 2): {1300*result}")   
+    # excersize 21
+    print("\nExcersize 21:")
+    A = np.array([[1, 1/2, 1/3],
+            [1/2, 1/3, 1/4],
+            [1/3, 1/4, 1/5]])
+    b = np.array([1, 0, 0])
+    result = LU(A,b)
+    print(f"The LU method solution (Group 2): {250*result[1]}")
+    result = gauss_seidel(A,b)
+    print(f"The gauss seidel method solution (Group 2): {250*result[1]}")
     # excersize 34
     x_data = [0.2 , 0.35, 0.45, 0.6,0.75,0.85,0.9]
     y_data = [13.7241,13.9776,14.0625,13.9776,13.7241,13.3056,12.7281]
