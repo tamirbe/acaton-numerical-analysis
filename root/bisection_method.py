@@ -26,8 +26,7 @@ Returns variables:
     1.  c - The approximate root of the function f
 """
 def bisection_method(f, a, b, tol=1e-6):
-    if np.sign(f(a)) == np.sign(f(b)):
-        raise Exception("The scalars a and b do not bound a root")
+
     c, k = 0, 0
     steps = max_steps(a, b, tol)  # calculate the max steps possible
 
@@ -50,9 +49,9 @@ def bisection_method(f, a, b, tol=1e-6):
 
     return c  # return the current root
 
-def main():
-    f = lambda x: x**2 - 4 * math.sin(x)
-    roots = bisection_method(f, 1, 3)
+def main(f=None, root_a=None,root_b=None):
+    f = lambda x: (math.cos(x**2 + 5*x + 6)) / (2 * math.exp(-x))
+    roots = bisection_method(f, -1.5, 2)
     print(f"\nThe equation f(x) has an approximate root at x = {roots}")
 
 if __name__ == '__main__':

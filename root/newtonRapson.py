@@ -13,7 +13,7 @@ def newton_raphson(f, df, p0, TOL, N=50):
         p0 = p
     return p
 
-def main():
+def main(f=None, df=None, p0=None, TOL=None, N=None):
     f = lambda x: x**3 - 3*x**2
     df = lambda x: 3*x**2 - 6*x
     p0 = -5
