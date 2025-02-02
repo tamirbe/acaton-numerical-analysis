@@ -53,6 +53,7 @@ def main(f=None, root_a=None,root_b=None):
     f = lambda x: (math.cos(x**2 + 5*x + 6)) / (2 * math.exp(-x))
     roots = bisection_method(f, -1.5, 2)
     print(f"\nThe equation f(x) has an approximate root at x = {roots}")
+    return roots
 
 if __name__ == '__main__':
     main()

@@ -21,6 +21,7 @@ def main(f=None, df=None, p0=None, TOL=None, N=None):
     N = 100
     roots = newton_raphson(f, df,p0,TOL,N)
     print("\nThe equation f(x) has an approximate root at x = {:<15.9f} ".format(roots))
+    return roots
 
 if __name__ == '__main__':
     main()
