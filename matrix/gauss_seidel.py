@@ -12,7 +12,7 @@ def is_diagonally_dominant(A):
 def is_square_matrix(A):
     return A.shape[0] == A.shape[1]
 
-def gauss_seidel(A, b, X0=None, TOL=1e-16, N=200):
+def gauss_seidel(A, b, X0=None, TOL=1e-16, N=15):
     n = len(A)
     k = 1
     if X0 is None:
