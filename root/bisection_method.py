@@ -50,11 +50,12 @@ def bisection_method(f, a, b, tol=1e-6):
 
     return c  # return the current root
 
-
-
-if __name__ == '__main__':
+def main():
     f = lambda x: x**2 - 4 * math.sin(x)
     roots = bisection_method(f, 1, 3)
     print(f"\nThe equation f(x) has an approximate root at x = {roots}")
+
+if __name__ == '__main__':
+    main()
 
 

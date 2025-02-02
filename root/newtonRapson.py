@@ -13,8 +13,7 @@ def newton_raphson(f, df, p0, TOL, N=50):
         p0 = p
     return p
 
-
-if __name__ == '__main__':
+def main():
     f = lambda x: x**3 - 3*x**2
     df = lambda x: 3*x**2 - 6*x
     p0 = -5
@@ -22,3 +21,6 @@ if __name__ == '__main__':
     N = 100
     roots = newton_raphson(f, df,p0,TOL,N)
     print("\nThe equation f(x) has an approximate root at x = {:<15.9f} ".format(roots))
+
+if __name__ == '__main__':
+    main()

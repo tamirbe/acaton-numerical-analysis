@@ -15,8 +15,10 @@ def trapezoidal_rule(f, a, b, n):
 
     return integral
 
-
-if __name__ == '__main__':
+def main():
     f = lambda x:math.e ** (x ** 2 )
     result = trapezoidal_rule(f, 0, 1, 2)
     print("Approximate integral:", result)
+
+if __name__ == '__main__':
+    main()

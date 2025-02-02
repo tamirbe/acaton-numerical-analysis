@@ -37,8 +37,7 @@ def romberg_integration(func, a, b, n):
 def f(x):
     return 1/(2+x ** 4)
 
-
-if __name__ == '__main__':
+def main():
 
     a = 0
     b = 1
@@ -46,5 +45,8 @@ if __name__ == '__main__':
     integral = romberg_integration(f, a, b, n)
 
     print( f" Division into n={n} sections ")
-    print(f"Approximate integral in range [{a},{b}] is {integral}")
+    print(f"Approximate integral in range [{a},{b}] is {integral}")    
+
+if __name__ == '__main__':
+    main()
 
