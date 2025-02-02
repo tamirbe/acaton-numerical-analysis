@@ -26,7 +26,7 @@ if __name__ == '__main__':
     f = lambda x: (math.sin(x**3 + 5*x**2 - 6)) / (2 * math.exp(-2*x))
     print("Excersize 8:\n")
     result = romberg(f,0,1,5)
-    print(f"The romberg method solution (Group 2): {8000*result}")
+    print(f"The romberg method solution (Group 2): {1300*result}")
     result = trap(f,0,1,5)
-    print(f"The trapezodial method solution (Group 2): {8000*result}")   
+    print(f"The trapezodial method solution (Group 2): {1300*result}")   
 
