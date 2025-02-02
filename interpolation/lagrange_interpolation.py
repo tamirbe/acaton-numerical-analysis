@@ -22,13 +22,11 @@ def lagrange_interpolation(x_data, y_data, x):
 
     return result
 
-def main():
+def main(x_data=None,y_data=None,x_interpolate=None):
 
-    x_data = [1, 2, 5]
-    y_data = [1, 0, 2]
-    x_interpolate = 3  # The x-value where you want to interpolate
     y_interpolate = lagrange_interpolation(x_data, y_data, x_interpolate)
     print("\nInterpolated value at x =", x_interpolate, "is y =", y_interpolate)
+    return y_interpolate
 
 if __name__ == '__main__':
     main()

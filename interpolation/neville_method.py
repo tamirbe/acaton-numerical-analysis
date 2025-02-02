@@ -14,13 +14,11 @@ def neville(x_data, y_data, x_interpolate):
 
     return tableau[0][n - 1]
 
-def main():
-    x_data = [1, 2, 5, 7]
-    y_data = [1, 0, 2, 3]
-    x_interpolate = 3
+def main(x_data=None,y_data=None,x_interpolate=None):
 
     interpolated_value = neville(x_data, y_data, x_interpolate)
     print(f"\nInterpolated value at x = {x_interpolate} is y = {interpolated_value}")
+    return interpolated_value
 
 if __name__ == '__main__':
     main()

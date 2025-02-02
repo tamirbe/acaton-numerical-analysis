@@ -29,4 +29,12 @@ if __name__ == '__main__':
     print(f"The romberg method solution (Group 2): {1300*result}")
     result = trap(f,0,1,5)
     print(f"The trapezodial method solution (Group 2): {1300*result}")   
-
+    # excersize 34
+    x_data = [0.2 , 0.35, 0.45, 0.6,0.75,0.85,0.9]
+    y_data = [13.7241,13.9776,14.0625,13.9776,13.7241,13.3056,12.7281]
+    x_interpolation = 0.65
+    print("Excersize 34:\n")
+    result = lagrange(x_data,y_data,x_interpolation)
+    print(f"The lagrange interpolation method solution (Group 2): {700*result}")
+    result = neville(x_data,y_data,x_interpolation)
+    print(f"The neville method solution (Group 2): {700*result}")   
