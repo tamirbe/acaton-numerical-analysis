@@ -36,10 +36,6 @@ def romberg_integration(func, a, b, n):
 
 def main(f=None,a=None,b=None,n=None):
 
-    f = lambda x: (math.sin(x**2 + 5*x + 6)) / (2 * math.exp(-x))
-    a = 0
-    b = 1
-    n = 5
     integral = romberg_integration(f, a, b, n)
 
     print( f" Division into n={n} sections ")

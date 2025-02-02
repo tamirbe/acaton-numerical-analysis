@@ -9,15 +9,24 @@ import math
 if __name__ == '__main__':
     # excersize 2
     f = lambda x: (math.sin(x**2 + 5*x + 6)) / (2 * math.exp(-x))
+    print("Excersize 2:\n")
     result = romberg(f,0,1,5)
     print(f"The romberg method solution (Group 2): {8000*result}")
     result = trap(f,0,1,5)
     print(f"The trapezodial method solution (Group 2): {8000*result}")
     # excersize 3
     f = lambda x: (math.cos(x**2 + 5*x + 6)) / (2 * math.exp(-x))
+    print("Excersize 3:\n")
     result = bisection(f, -1.5,2)
     print(f"The bistection solution (Group 2): {2500*result}")
     df = lambda x: (-math.sin(x**2 + 5*x + 6) * (2*x + 5) + math.cos(x**2 + 5*x + 6)) / (2 * math.exp(-x))
     result = newt_raph(f,df,-1.5,1e-6,100)
     print(f"The newton-raphson solution (Group 2): {2500*result}")
+     # excersize 8
+    f = lambda x: (math.sin(x**3 + 5*x**2 - 6)) / (2 * math.exp(-2*x))
+    print("Excersize 8:\n")
+    result = romberg(f,0,1,5)
+    print(f"The romberg method solution (Group 2): {8000*result}")
+    result = trap(f,0,1,5)
+    print(f"The trapezodial method solution (Group 2): {8000*result}")   
 
